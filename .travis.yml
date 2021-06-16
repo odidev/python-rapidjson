@@ -19,7 +19,17 @@ matrix:
       python: "3.6"
       services:
         - docker
+    - sudo: required
+      language: python
+      arch: arm64
+      python: "3.6"
+      services:
+        - docker
     - language: python
+      python: "3.6"
+      env: RUN_DEBUG_PYTHON=true
+    - language: python
+      arch: arm64
       python: "3.6"
       env: RUN_DEBUG_PYTHON=true
     - os: osx
